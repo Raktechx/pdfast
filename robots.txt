@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://pdfast.hiringedge.in/sitemap.xml

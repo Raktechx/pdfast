@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PDFast is a private, browser-based toolkit for everyday PDF tasks."
+    />
+    <meta name="theme-color" content="#f15f51" />
+    <title>PDFast — Simple PDF tools</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="PDFast home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>PDFast</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#tools">All tools</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="header-action" type="button" data-open-tool="merge">Start free</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Private PDF tools, without the clutter</p>
+          <h1>Small PDF jobs.<br /><span>Done fast.</span></h1>
+          <p class="hero-text">
+            Merge, split, convert, and organize files directly in your browser. No account and no uploads needed for these first tools.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-open-tool="merge">Choose a tool <span>→</span></button>
+            <a class="quiet-link" href="#how-it-works">See how it works</a>
+          </div>
+          <div class="trust-row" aria-label="Service benefits">
+            <span>✓ No account</span>
+            <span>✓ Browser processing</span>
+            <span>✓ Free essentials</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="paper paper-back"></div>
+          <div class="paper paper-middle"></div>
+          <div class="paper paper-front">
+            <div class="paper-top"><span class="mini-logo">P</span><span>PDFast</span></div>
+            <div class="paper-line line-long"></div>
+            <div class="paper-line line-medium"></div>
+            <div class="paper-chart"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="paper-line line-short"></div>
+          </div>
+          <div class="float-badge badge-merge">↔ <span>Merge</span></div>
+          <div class="float-badge badge-image">▧ <span>Images</span></div>
+        </div>
+      </section>
+
+      <section class="tools-section" id="tools" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The essentials</p>
+            <h2 id="tools-title">Choose what you need to do</h2>
+          </div>
+          <label class="tool-search">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="toolSearch" type="search" placeholder="Find a tool" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="tool-grid" id="toolGrid">
+          <button class="tool-card card-coral" type="button" data-tool="merge" data-search="merge combine join pdf">
+            <span class="tool-icon">↔</span>
+            <span class="tool-card-copy"><strong>Merge PDF</strong><small>Combine several PDFs into one file.</small></span>
+            <span class="card-arrow">→</span>
+          </button>
+          <button class="tool-card card-blue" type="button" data-tool="split" data-search="split extract separate pages pdf">
+            <span class="tool-icon">✂</span>
+            <span class="tool-card-copy"><strong>Split PDF</strong><small>Extract only the pages you need.</small></span>
+            <span class="card-arrow">→</span>
+          </button>
+          <button class="tool-card card-amber" type="button" data-tool="images" data-search="jpg png image photo to pdf">
+            <span class="tool-icon">▧</span>
+            <span class="tool-card-copy"><strong>Images to PDF</strong><small>Turn photos into a clean document.</small></span>
+            <span class="card-arrow">→</span>
+          </button>
+          <button class="tool-card card-violet" type="button" data-tool="pdf-images" data-search="pdf to jpg png images export">
+            <span class="tool-icon">▦</span>
+            <span class="tool-card-copy"><strong>PDF to images</strong><small>Save each PDF page as a PNG.</small></span>
+            <span class="card-arrow">→</span>
+          </button>
+          <button class="tool-card card-mint" type="button" data-tool="rotate" data-search="rotate organize orientation pages pdf">
+            <span class="tool-icon">↻</span>
+            <span class="tool-card-copy"><strong>Rotate pages</strong><small>Fix page orientation in one click.</small></span>
+            <span class="card-arrow">→</span>
+          </button>
+          <div class="tool-card coming-soon" aria-label="More tools coming soon">
+            <span class="tool-icon">＋</span>
+            <span class="tool-card-copy"><strong>More tools soon</strong><small>Compression, OCR, and Office conversion.</small></span>
+            <span class="soon-label">Soon</span>
+          </div>
+        </div>
+        <p class="empty-search" id="emptySearch" hidden>No matching tool yet. Try “PDF” or “images”.</p>
+      </section>
+
+      <section class="workbench" id="workbench" hidden aria-labelledby="workbenchTitle">
+        <div class="workbench-heading">
+          <button class="back-button" type="button" id="backToTools">← All tools</button>
+          <p class="eyebrow">Browser-based processing</p>
+          <h2 id="workbenchTitle">Merge PDF</h2>
+          <p id="workbenchDescription">Choose two or more PDFs and we will combine them in the selected order.</p>
+        </div>
+
+        <section class="tool-panel" data-panel="merge">
+          <label class="dropzone" for="mergeInput" data-dropzone>
+            <input id="mergeInput" type="file" accept="application/pdf" multiple hidden />
+            <span class="dropzone-icon">↔</span>
+            <strong>Choose PDF files</strong>
+            <span>or drag and drop them here</span>
+          </label>
+          <div class="selected-files" id="mergeFiles" aria-live="polite"></div>
+          <button class="primary-button process-button" type="button" data-action="merge">Merge PDFs <span>→</span></button>
+        </section>
+
+        <section class="tool-panel" data-panel="split" hidden>
+          <label class="dropzone" for="splitInput" data-dropzone>
+            <input id="splitInput" type="file" accept="application/pdf" hidden />
+            <span class="dropzone-icon">✂</span>
+            <strong>Choose a PDF file</strong>
+            <span>or drag and drop it here</span>
+          </label>
+          <div class="selected-files" id="splitFiles" aria-live="polite"></div>
+          <label class="field-label" for="pageRange">Pages to extract <span>Example: 1-3, 5, 8-10</span></label>
+          <input class="text-field" id="pageRange" type="text" inputmode="text" placeholder="1-3, 5" />
+          <button class="primary-button process-button" type="button" data-action="split">Create new PDF <span>→</span></button>
+        </section>
+
+        <section class="tool-panel" data-panel="images" hidden>
+          <label class="dropzone" for="imagesInput" data-dropzone>
+            <input id="imagesInput" type="file" accept="image/jpeg,image/png" multiple hidden />
+            <span class="dropzone-icon">▧</span>
+            <strong>Choose JPG or PNG images</strong>
+            <span>or drag and drop them here</span>
+          </label>
+          <div class="selected-files" id="imagesFiles" aria-live="polite"></div>
+          <label class="field-label" for="pageFormat">Page size</label>
+          <select class="text-field" id="pageFormat">
+            <option value="a4">A4 document</option>
+            <option value="fit">Fit each image</option>
+          </select>
+          <button class="primary-button process-button" type="button" data-action="images">Create PDF <span>→</span></button>
+        </section>
+
+        <section class="tool-panel" data-panel="pdf-images" hidden>
+          <label class="dropzone" for="pdfImagesInput" data-dropzone>
+            <input id="pdfImagesInput" type="file" accept="application/pdf" hidden />
+            <span class="dropzone-icon">▦</span>
+            <strong>Choose a PDF file</strong>
+            <span>or drag and drop it here</span>
+          </label>
+          <div class="selected-files" id="pdfImagesFiles" aria-live="polite"></div>
+          <label class="field-label" for="imageQuality">Image quality</label>
+          <select class="text-field" id="imageQuality">
+            <option value="1.4">Standard</option>
+            <option value="2">High</option>
+          </select>
+          <button class="primary-button process-button" type="button" data-action="pdf-images">Convert to PNG <span>→</span></button>
+        </section>
+
+        <section class="tool-panel" data-panel="rotate" hidden>
+          <label class="dropzone" for="rotateInput" data-dropzone>
+            <input id="rotateInput" type="file" accept="application/pdf" hidden />
+            <span class="dropzone-icon">↻</span>
+            <strong>Choose a PDF file</strong>
+            <span>or drag and drop it here</span>
+          </label>
+          <div class="selected-files" id="rotateFiles" aria-live="polite"></div>
+          <label class="field-label" for="rotateDegrees">Rotate every page</label>
+          <select class="text-field" id="rotateDegrees">
+            <option value="90">90° clockwise</option>
+            <option value="180">180°</option>
+            <option value="270">90° counter-clockwise</option>
+          </select>
+          <button class="primary-button process-button" type="button" data-action="rotate">Rotate PDF <span>→</span></button>
+        </section>
+
+        <div class="result-box" id="resultBox" hidden role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="how-section" id="how-it-works" aria-labelledby="how-title">
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow">Simple by design</p>
+            <h2 id="how-title">Three steps. That’s it.</h2>
+          </div>
+        </div>
+        <div class="steps-grid">
+          <article><span>01</span><h3>Choose a tool</h3><p>Pick the task that matches your file.</p></article>
+          <article><span>02</span><h3>Select your files</h3><p>Your files stay in your browser while we process them.</p></article>
+          <article><span>03</span><h3>Save the result</h3><p>Download the finished file instantly.</p></article>
+        </div>
+      </section>
+
+      <section class="privacy-banner" id="privacy">
+        <div class="privacy-icon">⌁</div>
+        <div><p class="eyebrow">Privacy first</p><h2>Your documents are yours.</h2></div>
+        <p>These first tools process files locally in your browser. We do not upload or store your documents.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">P</span><span>PDFast</span></a>
+      <p>Made for quick, everyday document jobs.</p>
+      <p class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></p>
+      <p>© <span id="year"></span> PDFast</p>
+    </footer>
+
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

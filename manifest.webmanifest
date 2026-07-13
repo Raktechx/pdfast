@@ -1,0 +1,10 @@
+{
+  "name": "PDFast — Simple PDF tools",
+  "short_name": "PDFast",
+  "description": "Private, browser-based PDF tools for everyday document tasks.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffdfb",
+  "theme_color": "#f15f51",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
