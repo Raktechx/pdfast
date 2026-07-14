@@ -2,28 +2,41 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://pdfast.hiringedge.in/</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <url>
+    <loc>https://pdfast.hiringedge.in/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-    <url>
-        <loc>https://pdfast.hiringedge.in/privacy.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
+  <url>
+    <loc>https://pdfast.hiringedge.in/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-    <url>
-        <loc>https://pdfast.hiringedge.in/terms.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
+  <url>
+    <loc>https://pdfast.hiringedge.in/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-    <url>
-        <loc>https://pdfast.hiringedge.in/contact.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+  <url>
+    <loc>https://pdfast.hiringedge.in/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pdfast.hiringedge.in/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://pdfast.hiringedge.in/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
 </urlset>
